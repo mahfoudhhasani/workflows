@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Use latest version
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -20,5 +20,5 @@ jobs:
 
       - name: Ask DeepSeek
         env:
-          DEEPSEEK_API_KEY: ${{ sk-9d2be95ee8344455a33c1eeba9f15027 }}
+          DEEPSEEK_API_KEY: ${{ sk-9d2be95ee8344455a33c1eeba9f15027 }}  # Correct secret usage
         run: python scripts/converse_with_deepseek.py
