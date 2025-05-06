@@ -1,0 +1,13 @@
+      - name: Trigger DeepSeek API
+        run: |
+          curl https://api.deepseek.com/chat/completions \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ sk-647262f0932c4d9aba9959338d8b0f44N }}" \
+            -d '{
+                "model": "deepseek-chat",
+                "messages": [
+                  {"role": "system", "content": "You are a helpful assistant."},
+                  {"role": "user", "content": "Hello!"}
+                ],
+                "stream": false
+              }'
